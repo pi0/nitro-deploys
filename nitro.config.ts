@@ -19,5 +19,5 @@ export default defineNitroConfig({
   ],
   cloudflare: {
     noWranglerDeployConfig: true,
-  }
+  },
 });
