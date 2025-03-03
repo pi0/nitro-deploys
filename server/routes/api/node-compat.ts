@@ -38,7 +38,12 @@ export default eventHandler(async (event) => {
   const results: Record<string, boolean> = {};
   for (const [group, groupTests] of Object.entries(nodeCompatTests)) {
     for (const [name, test] of Object.entries(groupTests)) {
-      results[`${group}:${name}`] = !!(await test());
+      try {
+        results[`${group}:${name}`] = !!(await test());
+      } catch (error) {
+        console.error(`Failed test ${group}:${name}`, error);
+        results[`${group}:${name}`] = false;
+      }
     }
   }
   return new Response(JSON.stringify(results, null, 2), {
