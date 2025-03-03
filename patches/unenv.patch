@@ -1,0 +1,12 @@
+diff --git a/dist/runtime/node/internal/process/env.mjs b/dist/runtime/node/internal/process/env.mjs
+index b6250d827c4abc2c57f3edec0d81fda672511229..c9ecd957840ab8659ad8e86cf7cc16ca44ecaa20 100644
+--- a/dist/runtime/node/internal/process/env.mjs
++++ b/dist/runtime/node/internal/process/env.mjs
+@@ -1,6 +1,5 @@
+ const _envShim = Object.create(null);
+-const _processEnv = globalThis.process?.env;
+-const _getEnv = (useShim) => _processEnv || globalThis.__env__ || (useShim ? _envShim : globalThis);
++const _getEnv = (useShim) => globalThis.__env__ || globalThis.process?.env || (useShim ? _envShim : globalThis);
+ export const env = /*@__PURE__*/ new Proxy(_envShim, {
+ 	get(_, prop) {
+ 		const env = _getEnv();
