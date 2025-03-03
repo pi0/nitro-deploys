@@ -22,7 +22,7 @@
     "prettier": "^3.5.3"
   },
   "resolutions": {
-    "unenv": "npm:unenv-nightly@2.0.0-20250303-222231-819343f"
+    "unenv": "npm:unenv-nightly@2.0.0-20250303-225639-d2219ed"
   },
   "packageManager": "pnpm@10.5.2",
   "engines": {
