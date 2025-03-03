@@ -21,8 +21,8 @@ importers:
         specifier: ^2.4.2
         version: 2.4.2
       nitropack:
-        specifier: npm:nitropack-nightly@2.11.0-20250303-174007.c9fdeb77
-        version: nitropack-nightly@2.11.0-20250303-174007.c9fdeb77(typescript@5.8.2)
+        specifier: npm:nitropack-nightly@2.11.0-20250303-182215.2462148f
+        version: nitropack-nightly@2.11.0-20250303-182215.2462148f(typescript@5.8.2)
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -1676,8 +1676,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  nitropack-nightly@2.11.0-20250303-174007.c9fdeb77:
-    resolution: {integrity: sha512-cB6+co4ss0PPyaqfVTa8HwGeoIxLImzRc7gafduojeKBRHs+QCIZFANP1CZRIDfl52zGtM1EuhSH2kH97wWCGQ==}
+  nitropack-nightly@2.11.0-20250303-182215.2462148f:
+    resolution: {integrity: sha512-ImyKL2usw7v7oEsTm6Z8NXBxJYDJxW0L7t3fPQGMblgr04NKRk2nzyKdJ35Xxh0lwNfh/jhZ1XzoGKigPCcUNw==}
     engines: {node: ^16.11.0 || >=17.0.0}
     hasBin: true
     peerDependencies:
@@ -2411,8 +2411,8 @@ packages:
     resolution: {integrity: sha512-KOAmtABz17fgK+uBBJYIzaPpIgX+JgTRgY4t3zXH18akc5rRtFkRmcNTMCuSxLdbOJDY9+T/O3nyA/EQuN4EWA==}
     engines: {node: '>=20.6.0'}
 
-  youch@4.1.0-beta.4:
-    resolution: {integrity: sha512-sknU8tgzmqx7PJBEqAdqBYjleLjHfNnFBTi3HwQTh6I+4OoJaIHkezxxUJ/ta7cpfgdG87bdYPCucVZV+GzhRA==}
+  youch@4.1.0-beta.5:
+    resolution: {integrity: sha512-92+bvKtAjm18S2o+IP0aLBpLtzY332Ji9geNLp07cLgHsK3aHVjWrg2eyE5LIKMv6j+GWu+Ehx4My7BTXxMbsA==}
     engines: {node: '>=20.6.0'}
 
   zip-stream@6.0.1:
@@ -3985,7 +3985,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  nitropack-nightly@2.11.0-20250303-174007.c9fdeb77(typescript@5.8.2):
+  nitropack-nightly@2.11.0-20250303-182215.2462148f(typescript@5.8.2):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 3.0.0
@@ -4059,7 +4059,7 @@ snapshots:
       unstorage: 1.15.0(db0@0.3.1)(ioredis@5.5.0)
       untyped: 2.0.0
       unwasm: 0.3.9
-      youch: 4.1.0-beta.4
+      youch: 4.1.0-beta.5
       youch-core: 0.3.1
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -4795,7 +4795,7 @@ snapshots:
       '@poppinss/exception': 1.2.0
       error-stack-parser-es: 0.1.5
 
-  youch@4.1.0-beta.4:
+  youch@4.1.0-beta.5:
     dependencies:
       '@poppinss/dumper': 0.6.2
       '@speed-highlight/core': 1.2.7
