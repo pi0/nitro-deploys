@@ -1,13 +1,9 @@
 export default eventHandler(() => {
-  return JSON.stringify(
-    {
-      "process.env": safeObj(process.env),
-      "process.env.TEST": process.env.TEST,
-      runtimeConfig: safeObj(useRuntimeConfig()),
-    },
-    undefined,
-    2,
-  );
+  return {
+    "process.env": safeObj(process.env),
+    "process.env.TEST": process.env.TEST,
+    runtimeConfig: safeObj(useRuntimeConfig()),
+  };
 });
 
 const tokenRe = /password|token|key|secret/i;

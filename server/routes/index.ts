@@ -6,6 +6,8 @@ const withBase = (p) => baseURL + p.replace(/^\//, "");
 
 const tests = ["api", "form-data"];
 
+const manualTests = ["env", "node-compat", "headers"];
+
 export const deployments = [..._deployments];
 if (import.meta.dev) {
   deployments.unshift({
@@ -106,6 +108,19 @@ export default defineEventHandler((event) => {
                 (test) => /* html */ ` <li id="tests-${test}">
                 <span id="tests-${test}-status">.</span>
               <a href="${withBase("/tests/" + test)}" class="underline">${test}</a>
+            </li>`,
+              )
+              .join("\n")}
+          </ul>
+        </div>
+
+        <!-- Manual tests -->
+        <div class="mb-3 border-t-1">
+          <ul style="list-style: circle">
+            ${manualTests
+              .map(
+                (link) => /* html */ ` <li>
+              <a href="${withBase(link)}" class="underline">${link}</a>
             </li>`,
               )
               .join("\n")}
