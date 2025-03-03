@@ -17,5 +17,7 @@ export default defineNitroConfig({
       maxAge: 60 * 60 * 24 * 365,
     },
   ],
-  cloudflare: {},
+  cloudflare: {
+    nodeCompat: true,
+  },
 });

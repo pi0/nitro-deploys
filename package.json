@@ -18,11 +18,8 @@
     "eslint": "^9.21.0",
     "eslint-config-unjs": "^0.4.2",
     "jiti": "^2.4.2",
-    "nitropack": "npm:nitropack-nightly@2.11.0-20250303-213708.27c25578",
+    "nitropack": "npm:nitropack-nightly@2.11.0-20250303-235119.ff3728de",
     "prettier": "^3.5.3"
-  },
-  "resolutions": {
-    "unenv": "npm:unenv-nightly@2.0.0-20250303-225639-d2219ed"
   },
   "packageManager": "pnpm@10.5.2",
   "engines": {
