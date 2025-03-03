@@ -21,6 +21,9 @@
     "nitropack": "npm:nitropack-nightly@2.11.0-20250303-213708.27c25578",
     "prettier": "^3.5.3"
   },
+  "resolutions": {
+    "unenv": "npm:unenv-nightly@2.0.0-20250303-222231-819343f"
+  },
   "packageManager": "pnpm@10.5.2",
   "engines": {
     "node": ">=20.18.1"
