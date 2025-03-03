@@ -4,7 +4,7 @@ import { defineNitroConfig } from "nitropack/config";
 const nitroPkg = createRequire(import.meta.url)("nitropack/package.json");
 
 export default defineNitroConfig({
-  compatibilityDate: "2024-10-21",
+  compatibilityDate: "2025-03-01",
   srcDir: "./server",
   baseURL: "/base/",
   runtimeConfig: {
