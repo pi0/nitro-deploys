@@ -18,7 +18,7 @@
     "eslint": "^9.21.0",
     "eslint-config-unjs": "^0.4.2",
     "jiti": "^2.4.2",
-    "nitropack": "npm:nitropack-nightly@2.11.0-20250303-235119.ff3728de",
+    "nitropack": "npm:nitropack-nightly@2.11.0-20250304-184554.fd96966f",
     "prettier": "^3.5.3"
   },
   "packageManager": "pnpm@10.5.2",
