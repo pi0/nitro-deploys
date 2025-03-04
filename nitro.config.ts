@@ -19,5 +19,11 @@ export default defineNitroConfig({
   ],
   cloudflare: {
     nodeCompat: true,
+    deployConfig: true,
+    wrangler: {
+      vars: {
+        TEST: "works",
+      },
+    },
   },
 });
