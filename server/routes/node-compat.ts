@@ -4,11 +4,13 @@ import nodeCrypto from "node:crypto";
 const nodeCompatTests = {
   globals: {
     // eslint-disable-next-line unicorn/prefer-global-this
-    global: () => globalThis.global === global,
-    // eslint-disable-next-line unicorn/prefer-global-this
-    Buffer: () => Buffer && globalThis.Buffer && global.Buffer,
+    global: () => global === globalThis.global,
     // eslint-disable-next-line unicorn/prefer-global-this
     process: () => process && globalThis.process && global.process,
+    Buffer: () => Buffer.from("hello").toString("hex") === "68656c6c6f",
+    BroadcastChannel: () => new BroadcastChannel("test"),
+    // PerformanceObserver: () => new PerformanceObserver(() => {}),
+    performance: () => performance.now() > 0,
   },
   crypto: {
     createHash: () => {
@@ -34,21 +36,62 @@ const nodeCompatTests = {
   },
 };
 
-export default eventHandler(async () => {
+export default eventHandler(async (event) => {
   const results: Record<string, boolean> = {};
   for (const [group, groupTests] of Object.entries(nodeCompatTests)) {
     for (const [name, test] of Object.entries(groupTests)) {
-      try {
-        results[`${group}:${name}`] = !!(await test());
-      } catch (error) {
-        console.error(`Failed test ${group}:${name}`, error);
-        results[`${group}:${name}`] = false;
-      }
+      results[`${group}:${name}`] = await testFn(test);
     }
   }
-  return new Response(JSON.stringify(results, undefined, 2), {
-    headers: {
-      "Content-Type": "application/json",
+  if (event.path.includes("json")) {
+    return new Response(JSON.stringify(results, undefined, 2), {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
+
+  return new Response(
+    /*html*/ `<html><head><title>Node.js Compatibility Tests</title>
+    <style>
+      table { width: 100%; border-collapse: collapse; }
+      th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+      th { background-color: #f2f2f2; }
+    </style>
+    </head><body>
+    <h1>Node.js Compatibility Tests</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Group</th>
+          <th>Test</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${Object.entries(results)
+          .map(
+            ([key, value]) =>
+              `<tr><td>${key.split(":")[0]}</td><td>${key.split(":")[1]}</td><td>${
+                value ? "✅" : "❌"
+              }</td></tr>`,
+          )
+          .join("")}
+      </tbody>
+    </table>
+  `,
+    {
+      headers: {
+        "Content-Type": "text/html",
+      },
     },
-  });
+  );
 });
+
+async function testFn(fn: () => any) {
+  try {
+    return !!(await fn());
+  } catch {
+    return false;
+  }
+}
