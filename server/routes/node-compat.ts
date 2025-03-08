@@ -1,6 +1,7 @@
 import nodeAsyncHooks from "node:async_hooks";
 import nodeCrypto from "node:crypto";
 import nodePerfHooks from "node:perf_hooks";
+import nodeEvents from "node:events";
 
 const nodeCompatTests = {
   globals: {
@@ -25,6 +26,15 @@ const nodeCompatTests = {
   perf_hooks: {
     performance: () => nodePerfHooks.performance.now() > 0,
     PerformanceObserver: () => new nodePerfHooks.PerformanceObserver(() => {}),
+  },
+  events: {
+    EventEmitter: () => {
+      const emitter = new nodeEvents.EventEmitter();
+      return new Promise<boolean>((resolve) => {
+        emitter.on("test", () => resolve(true));
+        emitter.emit("test");
+      });
+    },
   },
   async_hooks: {
     AsyncLocalStorage: async () => {
@@ -96,7 +106,8 @@ export default eventHandler(async (event) => {
 async function testFn(fn: () => any) {
   try {
     return !!(await fn());
-  } catch {
+  } catch (error) {
+    console.error(error);
     return false;
   }
 }
