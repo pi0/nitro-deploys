@@ -1,5 +1,6 @@
 import nodeAsyncHooks from "node:async_hooks";
 import nodeCrypto from "node:crypto";
+import nodePerfHooks from "node:perf_hooks";
 
 const nodeCompatTests = {
   globals: {
@@ -9,7 +10,7 @@ const nodeCompatTests = {
     process: () => process && globalThis.process && global.process,
     Buffer: () => Buffer.from("hello").toString("hex") === "68656c6c6f",
     BroadcastChannel: () => new BroadcastChannel("test"),
-    // PerformanceObserver: () => new PerformanceObserver(() => {}),
+    PerformanceObserver: () => new PerformanceObserver(() => {}),
     performance: () => performance.now() > 0,
   },
   crypto: {
@@ -20,6 +21,10 @@ const nodeCompatTests = {
         .digest("hex")
         .startsWith("2cf24");
     },
+  },
+  perf_hooks: {
+    performance: () => nodePerfHooks.performance.now() > 0,
+    PerformanceObserver: () => new nodePerfHooks.PerformanceObserver(() => {}),
   },
   async_hooks: {
     AsyncLocalStorage: async () => {
