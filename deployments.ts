@@ -42,6 +42,12 @@ export const deployments = [
     docs: "https://nitro.unjs.io/deploy/providers/cloudflare",
   },
   {
+    name: "Cloudflare Workers",
+    url: "https://nitro.sandbox-d13.workers.dev/",
+    dash: "https://dash.cloudflare.com/",
+    docs: "https://nitro.unjs.io/deploy/providers/cloudflare",
+  },
+  {
     name: "Deno Deploy",
     url: "https://nitro.deno.dev/",
     dash: "https://dash.deno.com/",

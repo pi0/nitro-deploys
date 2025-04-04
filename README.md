@@ -13,6 +13,7 @@ Continues [Nitro](https://nitro.unjs.io/) deployments for end-to-end testing dep
 - Azure Functions ([docs](https://nitro.unjs.io/deploy/providers/azure#azure-functions) | ~~deployment~~ )
 - Cleavr ([docs](https://nitro.unjs.io/deploy/providers/cleavr) | ~~deployment~~ )
 - Cloudflare Pages ([docs](https://nitro.unjs.io/deploy/providers/cloudflare) | [deployment](https://nitro-deployment.pages.dev/base/) )
+- Cloudflare Workers ([docs](https://nitro.unjs.io/deploy/providers/cloudflare) | [deployment](https://nitro.sandbox-d13.workers.dev/base/) )
 - Deno Deploy ([docs](https://nitro.unjs.io/deploy/providers/deno-deploy) | [deployment](https://nitro.deno.dev/base/) )
 - DigitalOcean ([docs](https://nitro.unjs.io/deploy/providers/digitalocean) | ~~deployment~~ )
 - Edgio ([docs](https://nitro.unjs.io/deploy/providers/edgio) | ~~deployment~~ )
