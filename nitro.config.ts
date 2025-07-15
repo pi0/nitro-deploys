@@ -4,7 +4,7 @@ import { defineNitroConfig } from "nitropack/config";
 const nitroPkg = createRequire(import.meta.url)("nitropack/package.json");
 
 export default defineNitroConfig({
-  compatibilityDate: "2025-03-01",
+  compatibilityDate: "latest",
   srcDir: "./server",
   baseURL: "/base/",
   runtimeConfig: {
@@ -18,12 +18,6 @@ export default defineNitroConfig({
     },
   ],
   cloudflare: {
-    // nodeCompat: true,
-    // deployConfig: true,
-    wrangler: {
-      vars: {
-        TEST: "works",
-      },
-    },
+    deployConfig: true,
   },
 });
