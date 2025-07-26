@@ -17,7 +17,7 @@ export default defineTestHandler(
       },
     };
   },
-  async (assert) => {
+  async ({ assert }) => {
     const formData = new FormData();
     formData.append("name", "John Doe");
 

@@ -4,7 +4,7 @@ export default defineTestHandler(
   async (_event) => {
     return "Hello, world!";
   },
-  async (assert) => {
+  async ({ assert }) => {
     const res = await fetch("").then((res) => res.text());
     assert(res === "Hello, world!", `Unexpected response: ${res}`);
   },

@@ -7,7 +7,7 @@ export default defineTestHandler(
       data: Object.fromEntries(formData),
     };
   },
-  async (assert) => {
+  async ({ assert }) => {
     const formData = new FormData();
     formData.append("name", "John Doe");
     const res = await fetch("", { method: "POST", body: formData }).then(

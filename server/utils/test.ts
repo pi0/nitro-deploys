@@ -3,7 +3,10 @@ import type { EventHandler } from "h3";
 export function defineTestHandler(
   name: string,
   serverHandler: EventHandler,
-  clientHandler: (assert: (condition: boolean, message: string) => void) => any,
+  clientHandler: (ctx: {
+    log: (text: string) => void;
+    assert: (condition: boolean, message: string) => void;
+  }) => any,
 ) {
   return defineEventHandler(async (event) => {
     // Client
@@ -38,7 +41,7 @@ export function defineTestHandler(
           // Run test
           log('⏳ Running test: ${name}');
           try {
-            await _test(assert);
+            await _test({ assert, log });
             log('✅ PASS');
           } catch (error) {
             log(error.stack);
