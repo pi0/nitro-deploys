@@ -18,7 +18,7 @@ export default defineEventHandler(() => {
   <body class="bg-neutral-900">
     <div class="grid grid-cols-3 h-screen">
     ${deployments
-      .filter((deployment) => deployment.url)
+      .filter((deployment) => deployment.url && !deployment.broken)
       .map(
         (deployment) => /* html */ `
       <div class="border-t border-gray-200 text-white relative">
