@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  unenv: npm:unenv-nightly@2.0.0-20250726-120425-4d8a6b7
+
 importers:
 
   .:
@@ -2805,8 +2808,8 @@ packages:
   undici-types@7.8.0:
     resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
 
-  unenv@2.0.0-rc.18:
-    resolution: {integrity: sha512-O0oVQVJ2X3Q8H4HITJr4e2cWxMYBeZ+p8S25yoKCxVCgDWtIJDcgwWNonYz12tI3ylVQCRyPV/Bdq0KJeXo7AA==}
+  unenv-nightly@2.0.0-20250726-120425-4d8a6b7:
+    resolution: {integrity: sha512-1YxKHxbeSGXC+NcKVRR0tDI0Cr8kxYNMEH8/3+NPQSUdyNPHXGEpwW6oKLaREj0BhIB85T8Sj6l/pe7T0Xt1Bw==}
 
   unicorn-magic@0.1.0:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
@@ -5157,7 +5160,7 @@ snapshots:
       ultrahtml: 1.6.0
       uncrypto: 0.1.3
       unctx: 2.4.1
-      unenv: 2.0.0-rc.18
+      unenv: unenv-nightly@2.0.0-20250726-120425-4d8a6b7
       unimport: 5.2.0
       unplugin-utils: 0.2.4
       unstorage: 1.16.1(@netlify/blobs@9.1.2)(db0@0.3.2)(ioredis@5.6.1)
@@ -5854,7 +5857,7 @@ snapshots:
   undici-types@7.8.0:
     optional: true
 
-  unenv@2.0.0-rc.18:
+  unenv-nightly@2.0.0-20250726-120425-4d8a6b7:
     dependencies:
       defu: 6.1.4
       exsolve: 1.0.7

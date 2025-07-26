@@ -20,4 +20,18 @@ export default defineNitroConfig({
   cloudflare: {
     deployConfig: true,
   },
+  // Experiment: runtime sourcemap support
+  unenv: {
+    polyfill: ["unenv/polyfill/source-maps"],
+  },
+  esbuild: {
+    options: {
+      sourcesContent: true,
+    },
+  },
+  rollupConfig: {
+    output: {
+      sourcemapExcludeSources: false,
+    },
+  },
 });
