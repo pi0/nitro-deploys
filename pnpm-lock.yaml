@@ -18,8 +18,8 @@ importers:
         specifier: ^0.5.0
         version: 0.5.0(eslint@9.32.0(jiti@2.5.1))(typescript@5.8.3)
       nitropack:
-        specifier: npm:nitropack-nightly@2.12.5-20250724-162330.adcd3954
-        version: nitropack-nightly@2.12.5-20250724-162330.adcd3954(@netlify/blobs@9.1.2)
+        specifier: npm:nitropack-nightly@2.12.5-20250726-101003.c3121977
+        version: nitropack-nightly@2.12.5-20250726-101003.c3121977(@netlify/blobs@9.1.2)
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -2152,8 +2152,8 @@ packages:
     resolution: {integrity: sha512-Nc3loyVASW59W+8fLDZT1lncpG7llffyZ2o0UQLx/Fr20i7P8oP+lE7+TEcFvXj9IUWU6LjB9P3BH+iFGyp+mg==}
     engines: {node: ^14.16.0 || >=16.0.0}
 
-  nitropack-nightly@2.12.5-20250724-162330.adcd3954:
-    resolution: {integrity: sha512-aE64paSUsHw0REUuprqJWwo23xnNpFGSS/lRRhcJm3z0aj3z6YqAUfF9EZPWe3pQFwUGncWHjg6mriaoYZ9MtQ==}
+  nitropack-nightly@2.12.5-20250726-101003.c3121977:
+    resolution: {integrity: sha512-EvKuHiTmpBHkumrBg8lVecemKkTyWJn11aKtr+YYxYqouw5LuL09QSyduQR52XIS77sLQFeS3blvdYJYVTePlg==}
     engines: {node: ^16.11.0 || >=17.0.0}
     hasBin: true
     peerDependencies:
@@ -5092,7 +5092,7 @@ snapshots:
       p-wait-for: 5.0.2
       qs: 6.14.0
 
-  nitropack-nightly@2.12.5-20250724-162330.adcd3954(@netlify/blobs@9.1.2):
+  nitropack-nightly@2.12.5-20250726-101003.c3121977(@netlify/blobs@9.1.2):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@netlify/functions': 3.1.10(rollup@4.45.1)
