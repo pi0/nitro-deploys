@@ -19,6 +19,9 @@ export default defineNitroConfig({
   ],
   cloudflare: {
     deployConfig: true,
+    wrangler: {
+      upload_source_maps: true,
+    },
   },
   // Experiment: runtime sourcemap support
   unenv: {
