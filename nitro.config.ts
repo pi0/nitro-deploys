@@ -27,14 +27,14 @@ export default defineNitroConfig({
   unenv: {
     polyfill: ["unenv/polyfill/source-maps"],
   },
-  esbuild: {
-    options: {
-      sourcesContent: true,
-    },
-  },
-  rollupConfig: {
-    output: {
-      sourcemapExcludeSources: false,
-    },
-  },
+  // esbuild: {
+  //   options: {
+  //     sourcesContent: true,
+  //   },
+  // },
+  // rollupConfig: {
+  //   output: {
+  //     sourcemapExcludeSources: false,
+  //   },
+  // },
 });
