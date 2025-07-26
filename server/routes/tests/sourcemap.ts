@@ -2,7 +2,6 @@
 export default defineTestHandler(
   "sourcemap",
   async (_event) => {
-    console.log(new Error("intentional error").stack);
     return new Error("intentional error").stack;
   },
   async ({ assert, log }) => {
