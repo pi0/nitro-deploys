@@ -12,12 +12,12 @@
   },
   "devDependencies": {
     "automd": "^0.4.0",
-    "eslint": "^9.31.0",
+    "eslint": "^9.32.0",
     "eslint-config-unjs": "^0.5.0",
-    "nitropack": "npm:nitropack-nightly@2.12.0-20250715-082121.fb010982",
+    "nitropack": "npm:nitropack-nightly@2.12.5-20250724-162330.adcd3954",
     "prettier": "^3.6.2"
   },
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.13.1",
   "engines": {
     "node": ">=20.18.1"
   }
