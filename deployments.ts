@@ -1,6 +1,7 @@
 export const deployments = [
   {
     name: "Alwaysdata",
+    broken: true,
     url: "https://nitro.alwaysdata.net/",
     dash: "https://admin.alwaysdata.com/",
     docs: "https://nitro.unjs.io/deploy/providers/alwaysdata",
